@@ -1,80 +1,40 @@
 <!--
   Plantilla de página para invitación del CSKA La Ropa CF
-  1. Guarda este archivo como index.html
-  2. Coloca tu logo o imagen de invitación como logo.png en la misma carpeta
-  3. Personaliza textos, colores y enlaces (botón Confirmar Asistencia)
-  4. Para publicar: crea un repositorio público en GitHub, sube index.html y assets,
-     y activa GitHub Pages (rama main, carpeta root).
+  
 -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!-- Desactivar caché para ver cambios sin F5 -->
+  <!-- Desactivar caché -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación - CSKA La Ropa CF</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 500px;
-      text-align: center;
-    }
-    .logo {
-      width: 100px;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      color: #c00;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      margin: 0.5rem 0;
-      color: #333;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: #c00;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .button:hover {
-      opacity: 0.9;
-    }
-    @media (max-width: 600px) {
-      .card {
-        margin: 1rem;
-      }
-    }
+    body {font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0;
+      display: flex; justify-content: center; align-items: center; height: 100vh;}
+    .card {background: #fff; padding: 2rem; border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 500px; text-align: center;}
+    .logo {width: 100px; margin-bottom: 1rem;}
+    h1 {color: #c00; margin-bottom: 1rem;}
+    p {margin: 0.5rem 0; color: #333; line-height: 1.4;}
+    .button {display: inline-block; margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem; background: #c00; color: #fff;
+      text-decoration: none; border-radius: 4px; cursor: pointer;}
+    .button:hover {opacity: 0.9;}
+    @media (max-width: 600px) {.card {margin: 1rem;}}
   </style>
 </head>
 <body>
   <div class="card">
     <img src="logo.png" alt="CSKA La Ropa CF" class="logo">
-    <h1>¡Estás Invitado!</h1>
-    <p>CSKA La Ropa CF tiene el gusto de invitarte a la presentación oficial de nuestra nueva temporada.</p>
+    <h1>Invitación Especial</h1>
+    <p>La directiva de CSKA La Ropa tiene el gusto de invitaros a la fiesta de celebración de título de liga 2024/2025 de la Liga de Witos. Un cordial saludo.</p>
     <p><strong>Fecha:</strong> Sábado 7 de junio de 2025<br>
-       <strong>Hora:</strong> 18:00 h<br>
        <strong>Lugar:</strong> Campo Municipal “La Ropa”</p>
+    <p>Atentamente, directiva CSKA La Ropa</p>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank" rel="noopener noreferrer">Confirmar Asistencia</a>
   </div>
 </body>
