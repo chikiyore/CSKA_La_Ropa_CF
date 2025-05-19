@@ -1,6 +1,6 @@
 <!--
   Plantilla de página para invitación del CSKA La Ropa CF
-  
+  Ahora al pulsar "Confirmar Asistencia" se muestra un GIF en lugar de un video.
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -16,14 +16,16 @@
     body {font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0;
       display: flex; justify-content: center; align-items: center; height: 100vh;}
     .card {background: #fff; padding: 2rem; border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 500px; text-align: center;}
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 500px; text-align: center; position: relative;}
     .logo {width: 100px; margin-bottom: 1rem;}
     h1 {color: #c00; margin-bottom: 1rem;}
     p {margin: 0.5rem 0; color: #333; line-height: 1.4;}
     .button {display: inline-block; margin-top: 1.5rem;
       padding: 0.75rem 1.5rem; background: #c00; color: #fff;
-      text-decoration: none; border-radius: 4px; cursor: pointer;}
+      text-decoration: none; border: none; border-radius: 4px; cursor: pointer;}
     .button:hover {opacity: 0.9;}
+    #gif-container {display: none; margin-top: 1rem;}
+    #gif-container img {max-width: 100%; border-radius: 8px;}
     @media (max-width: 600px) {.card {margin: 1rem;}}
   </style>
 </head>
@@ -35,7 +37,20 @@
     <p><strong>Fecha:</strong> Sábado 7 de junio de 2025<br>
        <strong>Lugar:</strong> Campo Municipal “La Ropa”</p>
     <p>Atentamente, directiva CSKA La Ropa</p>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank" rel="noopener noreferrer">Confirmar Asistencia</a>
+    <!-- Botón que muestra el GIF en lugar de redirigir -->
+    <button id="confirm-btn" class="button">Confirmar Asistencia</button>
+    <!-- Contenedor del GIF -->
+    <div id="gif-container">
+      <img src="celebracion.gif" alt="Celebración CSKA La Ropa">
+    </div>
   </div>
+  <script>
+    document.getElementById('confirm-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      // Ocultar el botón y mostrar el GIF
+      this.style.display = 'none';
+      document.getElementById('gif-container').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
