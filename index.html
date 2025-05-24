@@ -1,12 +1,9 @@
-<!--
-  Plantilla de página para invitación del CSKA La Ropa CF
-  Ahora al pulsar "Confirmar Asistencia" se muestra un GIF en lugar de un video.
--->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!-- Desactivar caché -->
+  
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -37,19 +34,27 @@
     <p><strong>Fecha:</strong> Sábado 7 de junio de 2025<br>
        <strong>Lugar:</strong> Campo Municipal “La Ropa”</p>
     <p>Atentamente, directiva CSKA La Ropa</p>
-    <!-- Botón que muestra el GIF en lugar de redirigir -->
+    
     <button id="confirm-btn" class="button">Confirmar Asistencia</button>
     <!-- Contenedor del GIF -->
     <div id="gif-container">
       <img src="celebracion.gif" alt="Celebración CSKA La Ropa">
     </div>
+    <!-- Elemento de audio oculto -->
+    <audio id="bg-audio" src="musica.mp3" loop preload="auto"></audio>
   </div>
   <script>
-    document.getElementById('confirm-btn').addEventListener('click', function(e) {
+    const btn = document.getElementById('confirm-btn');
+    const gif = document.getElementById('gif-container');
+    const audio = document.getElementById('bg-audio');
+    btn.addEventListener('click', function(e) {
       e.preventDefault();
-      // Ocultar el botón y mostrar el GIF
+      // Mostrar GIF
+      gif.style.display = 'block';
+      // Ocultar botón
       this.style.display = 'none';
-      document.getElementById('gif-container').style.display = 'block';
+      // Reproducir música (user interaction)
+      audio.play();
     });
   </script>
 </body>
